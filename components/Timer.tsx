@@ -2,30 +2,9 @@
 "use client"
 import React, { useState, useEffect } from 'react';
 
-const options = {
-    timeZone: 'America/Costa_Rica',
-    hour: 'numeric',
-    minute: 'numeric',
-    second: 'numeric'
-};
 
-const myTime = new Date().getHours();
-let status = "";
 
-let colorStyle = {
-    color: ""
-};
 
-if (myTime <= 9) {
-    status = "I'm Surfing 🏄‍♂️ right now... I'll be back online at 9am";
-    colorStyle.color = "red";
-} else if (myTime > 9 && myTime < 18) {
-    status = "in office till 6pm";
-    colorStyle.color = "green";
-} else {
-    status = "I'm Surfing 🏄‍♂️ right now... I'll be back online at 9am";
-    colorStyle.color = "red";
-}
 
 function Timer() {
     const [time, setTime] = useState(new Date());
@@ -37,10 +16,50 @@ function Timer() {
         return () => clearInterval(intervalId);
     }, []);
 
+
+    // const myTime = new Date().getHours();
+    let status = "";
+
+    let colorStyle = {
+        color: ""
+    };
+
+
+    // Return hour
+
+    const myTime = new Intl.DateTimeFormat('default', {
+        timeZone: "America/Costa_Rica",
+        hour: "numeric",
+    })
+    let myNewTime = String(myTime.format(Date.now())).slice(0, 1);
+    // console.log(myTime.format(Date.now()))
+
+
+
+
+
+    // if (myTime <= 9) {
+    //     status = "I'm Surfing 🏄‍♂️ right now... I'll be back online at 9am";
+    //     colorStyle.color = "red";
+    // } else if (myTime > 9 && myTime < 18) {
+    //     status = "in office till 6pm";
+    //     colorStyle.color = "green";
+    // } else {
+    //     status = "I'm Surfing 🏄‍♂️ right now... I'll be back online at 9am";
+    //     colorStyle.color = "red";
+    // }
+
+
     return (
         <div className='relative '>
+
             <div className='inline-block text-[#F6931A]/50 text-sm'>Current Location: Playa Guiones 🏝️, CR <div className='inline '>
-                <div className='inline'>{new Intl.DateTimeFormat('default', options).format(time)}</div>
+                <div className='inline'>{new Intl.DateTimeFormat('default', {
+                    timeZone: "America/Costa_Rica",
+                    hour: "numeric",
+                    minute: "numeric",
+                    second: "numeric"
+                }).format(Date.now())}</div>
             </div> ({status}</div>
             {/* Tickers START */}
             {status === "I'm Surfing 🏄‍♂️ right now... I'll be back online at 9am" ?
