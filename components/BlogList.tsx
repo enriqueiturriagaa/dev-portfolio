@@ -34,7 +34,7 @@ function BlogList({ posts }: Props) {
                                     <p className='text-xs font-light text-[#CCCCCC]'>Stack</p>
                                     {post.categories.map((category) => (
                                         <div key={post._id} className=' inline'>
-                                            <p className='inline text-sm'>{category.title} </p>
+                                            <div className='inline text-sm'>{category.title} </div>
                                         </div>
                                     ))}
                                 </div>

@@ -18,7 +18,7 @@ function Footer() {
 
         {/* Right */}
         <div className="md:flex md:space-x-16 text-white text-sm">
-          <div className="flex flex-col">
+          <div className="flex flex-col mb-8">
             <p className="text-lg mb-5">Other Links</p>
             <a href="https://www.nulliusinverba.io/" target="_blank" className="cursor-pointer mb-1 hover:underline transition-all">My Blog</a>
             <a href="https://www.nulliusinverba.io/about" target="_blank" className="cursor-pointer mb-1 hover:underline transition-all">About Me</a>
