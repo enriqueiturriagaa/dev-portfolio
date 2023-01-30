@@ -16,6 +16,8 @@ interface Post extends Base {
     title: string;
     description: string;
     summary: string;
+    liveLink: string;
+    codeLink: string;
 }
 
 interface Author extends Base {
@@ -23,6 +25,15 @@ interface Author extends Base {
     image: Image;
     name: string;
     slug: Slug;
+}
+
+interface Experience extends Base {
+    title: string;
+    slug: Slug;
+    publishedAt: string;
+    summary: string;
+    time: string;
+    tech: string;
 }
 
 interface Image {
@@ -59,6 +70,7 @@ interface Category extends Base {
     slug: Slug;
     description: Block[];
     title: string;
+    image: Image;
 }
 
 interface MainImage {
@@ -70,3 +82,5 @@ interface Title {
     _type: 'string';
     current: string;
 }
+
+

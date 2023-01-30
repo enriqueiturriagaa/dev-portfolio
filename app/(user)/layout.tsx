@@ -9,7 +9,7 @@ export default function RootLayout({
 }) {
   return (
     <html>
-      <body className='bg-[#191A22] bg-hero-pattern text-white max-w-5xl mx-auto '>
+      <body className='bg-[#191A22] bg-hero-pattern text-white  mx-auto '>
         <Header />
         {/* Banner */}
         {children}

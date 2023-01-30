@@ -6,7 +6,7 @@ function Header() {
 
 
   return (
-    <header className="flex items-center justify-between space-x-2 font-bold py-5 mb-10 px-4 lg:px-0 ">
+    <header className="max-w-5xl m-auto flex items-center justify-between space-x-2 font-bold py-5 mb-10 px-4 lg:px-0 ">
       {/* <div className="flex items-center ">
                 <Link href="/">
           <div className="hidden lg:block">
@@ -19,13 +19,13 @@ function Header() {
       {/* Social Icons */}
       <div className="flex">
         <Link href="https://www.linkedin.com/in/enriqueiturriaga/" className="border-[1px] p-3 bg-[#131416]/50 rounded-sm	 border-[#2E2E2E] mr-3 drop-shadow-blue-glow hover:drop-shadow-blue-glow-hover transition-all">
-          <Image className="cursor-pointer min-h-[30px] min-w-[30px]" src="/assets/linkedin-icon.svg" alt="linkedin" width={30} height={30} />
+          <Image className="cursor-pointer min-h-[20px] min-w-[20px]" src="/assets/linkedin-icon.svg" alt="linkedin" width={30} height={30} />
         </Link>
         <Link href="https://www.linkedin.com/in/enriqueiturriaga/" className="border-[1px] p-3 bg-[#131416]/50 rounded-sm	 border-[#2E2E2E] mr-3 drop-shadow-blue-glow hover:drop-shadow-blue-glow-hover transition-all">
-          <Image className="cursor-pointer min-h-[30px] min-w-[30px]" src="/assets/twitter-icon.svg" alt="linkedin" width={30} height={30} />
+          <Image className="cursor-pointer min-h-[20px] min-w-[20px]" src="/assets/twitter-icon.svg" alt="linkedin" width={30} height={30} />
         </Link>
         <Link href="https://www.linkedin.com/in/enriqueiturriaga/" className="border-[1px] p-3 bg-[#131416]/50 rounded-sm	 border-[#2E2E2E] mr-3 drop-shadow-blue-glow hover:drop-shadow-blue-glow-hover transition-all">
-          <Image className="cursor-pointer min-h-[30px] min-w-[30px]" src="/assets/github-icon.svg" alt="linkedin" width={30} height={30} />
+          <Image className="cursor-pointer min-h-[20px] min-w-[20px]" src="/assets/github-icon.svg" alt="linkedin" width={30} height={30} />
         </Link>
 
       </div>
@@ -43,7 +43,7 @@ function Header() {
       {/* Button */}
       <div className="flex font-roboto">
         <Link
-          href=""
+          href="mailto:hey@enrique.zone"
           className="ml-5 px-6 py-2 border-2 border-[#F6931A] rounded-sm md:text-base bg-[#2A2523] hover:bg-[#F6931A] text-[#F6931A] hover:text-[#343434] transition-all flex items-center drop-shadow-gold-glow hover:drop-shadow-gold-glow-hover "
         ><p className="text-s md:text-l ">hey@enrique.zone</p></Link>
       </div>

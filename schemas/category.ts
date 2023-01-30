@@ -24,6 +24,14 @@ export default defineType({
       title: 'Description',
       type: 'blockContent',
     }),
+    defineField({
+      name: 'image',
+      title: 'Image',
+      type: 'image',
+      options: {
+        hotspot: true,
+      },
+    }),
 
   ],
 })

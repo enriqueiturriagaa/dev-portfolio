@@ -6,31 +6,45 @@ import PreviewBlogList from "../../components/PreviewBlogList";
 import BlogList from "../../components/BlogList";
 import RightPannel from "../../components/RightPannel";
 import Hero from "../../components/Hero";
+import SpinnerMobile from "../../components/SpinnerMobile";
+import Experience from "../../components/Experience";
+import Stack from "../../components/Stack";
+import CTA from "../../components/CTA";
 
 
 const query = groq`
     *[_type == "post"] {
         ...,
+        liveLink,
+        codelink,
         author->,
         categories[]->
         
-    } | order(_createdAt desc)
+    } | order(_updatedAt desc)
     
 `;
 
 
 const query2 = groq`
     *[_type == "category"]{
+  ...,
   _id,
   _type,
   title,
   slug,
-  "posts": *[_type == "post" && references(^._id)]{
-    title,
-    slug
-  }
+  image,
 }`
+const expQuery = groq`
+*[_type == "experience"] {
+    ...,
+    title,
+    description,
+    time,
+    tech
+    
+} | order(_publishedAt desc)
 
+`;
 
 export const revalidate = 60;
 
@@ -50,12 +64,17 @@ export default async function HomePage() {
 
     const posts = await client.fetch(query);
     const categories = await client.fetch(query2);
+    const experiences = await client.fetch(expQuery);
 
 
     return (
         <div className=" ">
             <Hero />
-            <div className="w-full lg:w-2/3  lg:pr-20 min-w-[60%] px-4 lg:px-0"><BlogList posts={posts} categories={categories} /></div>
+            <SpinnerMobile />
+            <div className="w-full lg:px-0"><BlogList posts={posts} /></div>
+            <Experience experiences={experiences} />
+            <Stack categories={categories} />
+            <CTA />
 
 
         </div>

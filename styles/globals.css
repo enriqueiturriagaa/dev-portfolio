@@ -17,3 +17,27 @@
         transform: translateX(-50%);
     }
 }
+
+.bg-gradient-to-r {
+    background-image: linear-gradient(324.19deg, #222839 -2.96%, #212736 73.63%, #1D2027 103.32%)
+}
+
+.from-orange-500 {
+    background-image: radial-gradient(66.87% 66.87% at 38.45% 0%, rgba(246, 147, 26, 0.066) 0%, rgba(0, 0, 0, 0) 100%)
+}
+
+.bg-gradient-to-r-lg {
+    background-image: linear-gradient(324.19deg, #222839 -2.96%, #212736 73.63%, #1D2027 103.32%);
+}
+
+.from-indigo-800 {
+    background-color: #222839;
+}
+
+.to-indigo-900 {
+    background-color: #1D2027;
+}
+
+.shadow-lg {
+    box-shadow: 0px 4px 50px rgba(246, 147, 26, 0.04);
+}
