@@ -7,9 +7,9 @@ export const RichTextComponents = {
     types: {
         image: ({ value }: any) => {
             return (
-                <div className="relative w-full h-96 my-10 mx auto">
+                <div className="relative min-w-[100%] w-full h-96 my-0 mx-auto">
                     <Image
-                        className='object-contain'
+                        className='object-contain min-w-[100%] lg:my-0 my-0 '
                         src={urlFor(value).url()}
                         alt="Blog Post Image"
                         fill
@@ -29,21 +29,21 @@ export const RichTextComponents = {
     },
     listItem: {
         number: ({ children }: any) => (
-            <li className='py-1 mb-2 font-gochi'>{children}</li>
+            <li className='py-1 mb-2 font-roboto'>{children}</li>
         ),
         bullet: ({ children }: any) => (
-            <li className='py-1 mb-2 font-gochi'>{children}</li>
+            <li className='py-1 mb-2 font-roboto'>{children}</li>
         ),
     },
     block: {
         h1: ({ children }: any) => (
-            <h1 className='text-4xl pt-10 pb-2 font-gochi'>{children}</h1>),
+            <h1 className='text-4xl pt-10 pb-2 font-roboto'>{children}</h1>),
         h2: ({ children }: any) => (
-            <h2 className='text-3xl pt-10 pb-2 font-gochi'>{children}</h2>),
+            <h2 className='text-3xl pt-10 pb-2 font-roboto'>{children}</h2>),
         h3: ({ children }: any) => (
-            <h3 className='text-2xl pt-10 pb-2 font-gochi'>{children}</h3>),
+            <h3 className='text-2xl pt-10 pb-2 font-roboto'>{children}</h3>),
         h4: ({ children }: any) => (
-            <h4 className='text-xl pt-10 pb-2 font-gochi'>{children}</h4>),
+            <h4 className='text-xl pt-10 pb-2 font-roboto'>{children}</h4>),
         normal: ({ children }: any) => (
             <p className='pt-6 pb-1 font-roboto'>{children}</p>
         ),

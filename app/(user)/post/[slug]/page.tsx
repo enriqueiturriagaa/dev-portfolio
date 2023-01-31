@@ -5,6 +5,9 @@ import author from "../../../../schemas/author";
 import { PortableText } from "@portabletext/react";
 import { RichTextComponents } from "../../../../components/RichTextComponents";
 import ClientSideRoute from "../../../../components/ClientSideRoute";
+import CTA from "../../../../components/CTA";
+import { ArrowLongLeftIcon } from '@heroicons/react/24/solid';
+
 
 
 
@@ -63,13 +66,16 @@ async function Post({ params: { slug } }: Props) {
 
 
     return (
-        <div className="bg-[#FBFAFB] text-[#343434] flex  px-12">
-            <article className="w-full lg:w-2/3  lg:pr-20 min-w-[60%]">
+        <div className="max-w-5xl m-auto px-4 lg:px-0 font-roboto">
+            <article className="w-full lg:w-2/3 m-auto lg:pr-20 min-w-[60%]">
+                <div className="mb-10 text-[#F6931A] hover:underline cursor-pointer">
+                    <a href='/'><ArrowLongLeftIcon className="inline w-8 hover:underline transition-all" /> All Projects</a>
+                </div>
                 <section>
                     <div className="mb-5">
-                        <h1 className="font-gochi text-4xl">{post.title}</h1>
+                        <h1 className="font-roboto text-4xl">{post.title}</h1>
 
-                        <p className="inline font-roboto text-gray-400 text-xs">Written by {post.author.name} on </p>
+                        <p className="inline font-roboto text-gray-400 text-xs">Project by {post.author.name}, published on </p>
                         <p className="inline font-roboto text-gray-400 text-xs italics">
                             {new Date(post._createdAt).toLocaleDateString
                                 ("en-US", {
@@ -78,18 +84,21 @@ async function Post({ params: { slug } }: Props) {
                                     year: "numeric"
                                 })}
                         </p>
-                        <div className='mt-2'>
+                        <div className='my-2'>
+                            <p className='text-xs font-light text-[#CCCCCC] inline'>Stack: </p>
                             {post.categories.map((category) => (
-                                <div key={post._id} className='inline-block'>
-                                    <ClientSideRoute key={category._id} route={`/category/${category.slug.current}`}>
-
-                                        <p className='inline-block text-center bg-[#FFEBE0] px-3 py-1 mr-2 mb-2 text-sm font-gochi'>
-                                            #{category.title}
-                                        </p>
-
-                                    </ClientSideRoute>
+                                <div key={post._id} className=' inline'>
+                                    <div className='inline text-sm'>{category.title} </div>
                                 </div>
                             ))}
+                        </div>
+                        {/* Role */}
+                        <div>
+                            <p className='text-xs font-light text-[#CCCCCC] inline'>Role: </p>
+                            <p className='font-roboto text-sm inline '>
+                                {post.summary}
+                            </p>
+
                         </div>
 
                     </div>
@@ -100,9 +109,9 @@ async function Post({ params: { slug } }: Props) {
 
                 </section>
             </article>
-            <div className="font-gochi lg:1/3 hidden lg:inline max-w-md">
-                <RightPannel categories={categories} />
-            </div>
+            <div className="my-20 border-t-2 border-[#F6931A]"></div>
+            <CTA />
+
         </div>
     )
 }

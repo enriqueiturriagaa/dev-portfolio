@@ -83,7 +83,7 @@ function BlogList({ posts }: Props) {
 
                 // </ClientSideRoute>
             ))}
-            <p className='text-[#CCCCCC] inline-block mx-auto'>This is just a small sample of my projects...</p>
+            <p className='text-[#CCCCCC] block float mx-auto'>This is just a small sample of my projects...</p>
         </div>
     )
 }

@@ -44,7 +44,7 @@ function Header() {
       <div className="flex font-roboto">
         <Link
           href="mailto:hey@enrique.zone"
-          className="ml-5 px-6 py-2 border-2 border-[#F6931A] rounded-sm md:text-base bg-[#2A2523] hover:bg-[#F6931A] text-[#F6931A] hover:text-[#343434] transition-all flex items-center drop-shadow-gold-glow hover:drop-shadow-gold-glow-hover "
+          className="ml-3 px-2 md:px-6 py-2 border-2 border-[#F6931A] rounded-sm md:text-base bg-[#2A2523] hover:bg-[#F6931A] text-[#F6931A] hover:text-[#343434] transition-all flex items-center drop-shadow-gold-glow hover:drop-shadow-gold-glow-hover "
         ><p className="text-s md:text-l ">hey@enrique.zone</p></Link>
       </div>
     </header>
