@@ -10,16 +10,16 @@ type Props = {
 
 function BlogList({ posts }: Props) {
     return (
-        <div className='max-w-5xl m-auto px-4 lg:px-0 font-roboto py-20 flex justify-between flex-wrap'>
+        <div className='max-w-5xl m-auto px-4 lg:px-0 font-roboto py-20 flex justify-between flex-wrap text-left'>
 
             {posts.map((post) => (
                 // <ClientSideRoute key={post._id} route={`/post/${post.slug.current}`}>
-                <div key={post._id} className=" flex mx-auto lg:w-[32%]  md:min-w-[250px]  flex-col mb-10 group  border-2 rounded border-[#2B2B2B] bg-[#2B2B2B]/50 p-[20px] hover:drop-shadow-blue-glow transition-all">
+                <div key={post._id} className=" flex mx-auto md:mx-auto lg:mx-0 lg:w-[32%] max-w-[400px] md:min-w-[250px]  flex-col mb-10 group  border-2 rounded border-[#2B2B2B] bg-[#2B2B2B]/50 p-[20px] hover:drop-shadow-blue-glow transition-all">
                     <div className='grow flex flex-col space-between p-1 transition-transform duration-200 ease-out '>
                         {/* TOP */}
                         <div className='grow'>
                             <Image
-                                className='p-0 m-0 rounded-sm mb-4'
+                                className='p-0 m-0 rounded-md mb-4'
                                 src={urlFor(post.mainImage).url()}
                                 alt={post.author.name}
                                 width={400}
@@ -83,7 +83,10 @@ function BlogList({ posts }: Props) {
 
                 // </ClientSideRoute>
             ))}
-            <p className='text-[#CCCCCC] block float mx-auto'>This is just a small sample of my projects...</p>
+            <div className='w-full'>
+
+                <p className='text-[#CCCCCC] block float mx-auto'>This is just a small sample of my projects...</p>
+            </div>
         </div>
     )
 }

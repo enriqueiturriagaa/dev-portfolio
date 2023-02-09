@@ -60,7 +60,7 @@ function Timer() {
                     minute: "numeric",
                     second: "numeric"
                 }).format(Date.now())}</div>
-            </div> ({status}</div>
+            </div> {status}</div>
             {/* Tickers START */}
             {status === "I'm Surfing 🏄‍♂️ right now... I'll be back online at 9am" ?
                 <div className='inline-block relative ml-2'>
@@ -83,7 +83,7 @@ function Timer() {
                 </span>
             </div> */}
             {/* Ticker ENDS */}
-            <p className='inline-block text-[#F6931A]/50 text-sm'>)</p>
+            <p className='inline-block text-[#F6931A]/50 text-sm'></p>
         </div>
     )
 }
