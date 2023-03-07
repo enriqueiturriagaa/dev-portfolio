@@ -5,15 +5,30 @@ import urlFor from '../lib/urlFor';
 
 export const RichTextComponents = {
     types: {
+        // image: ({ value }: any) => {
+        //     return (
+        //         <div className="relative min-w-[100%] w-full h-96 my-0 mx-auto">
+        //             <Image
+        //                 className='object-contain min-w-[100%] lg:my-0 my-0 '
+        //                 src={urlFor(value).url()}
+        //                 alt="Blog Post Image"
+        //                 fill
+        //             />
+        //         </div>
+        //     );
+        // }
         image: ({ value }: any) => {
             return (
-                <div className="relative min-w-[100%] w-full h-96 my-0 mx-auto">
-                    <Image
-                        className='object-contain min-w-[100%] lg:my-0 my-0 '
+                <div className="relative min-w-[100%] w-full  my-0 mx-auto object-contain">
+                    {/* <Image
+                        // className='object-contain min-w-[100%] lg:my-0 my-0 '
+                        className='static object-contain w-full lg:my-0 my-0 py-0'
                         src={urlFor(value).url()}
                         alt="Blog Post Image"
                         fill
-                    />
+
+                    /> */}
+                    <img src={urlFor(value).url()} className='static object-scale-down w-full lg:my-0 my-0 py-0' alt="Blog Post Image" />
                 </div>
             );
         }
