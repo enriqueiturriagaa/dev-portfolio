@@ -21,11 +21,11 @@ function Header() {
         <Link href="https://www.linkedin.com/in/enriqueiturriaga/" className="border-[1px] p-3 bg-[#131416]/50 rounded-sm	 border-[#2E2E2E] mr-3 drop-shadow-blue-glow hover:drop-shadow-blue-glow-hover transition-all">
           <Image className="cursor-pointer min-h-[20px] min-w-[20px]" src="/assets/linkedin-icon.svg" alt="linkedin" width={30} height={30} />
         </Link>
-        <Link href="https://www.linkedin.com/in/enriqueiturriaga/" className="border-[1px] p-3 bg-[#131416]/50 rounded-sm	 border-[#2E2E2E] mr-3 drop-shadow-blue-glow hover:drop-shadow-blue-glow-hover transition-all">
-          <Image className="cursor-pointer min-h-[20px] min-w-[20px]" src="/assets/twitter-icon.svg" alt="linkedin" width={30} height={30} />
+        <Link href="https://twitter.com/iturriagaayala" className="border-[1px] p-3 bg-[#131416]/50 rounded-sm	 border-[#2E2E2E] mr-3 drop-shadow-blue-glow hover:drop-shadow-blue-glow-hover transition-all">
+          <Image className="cursor-pointer min-h-[20px] min-w-[20px]" src="/assets/twitter-icon.svg" alt="twitter" width={30} height={30} />
         </Link>
-        <Link href="https://www.linkedin.com/in/enriqueiturriaga/" className="border-[1px] p-3 bg-[#131416]/50 rounded-sm	 border-[#2E2E2E] mr-3 drop-shadow-blue-glow hover:drop-shadow-blue-glow-hover transition-all">
-          <Image className="cursor-pointer min-h-[20px] min-w-[20px]" src="/assets/github-icon.svg" alt="linkedin" width={30} height={30} />
+        <Link href="https://github.com/enriqueiturriagaa" className="border-[1px] p-3 bg-[#131416]/50 rounded-sm	 border-[#2E2E2E] mr-3 drop-shadow-blue-glow hover:drop-shadow-blue-glow-hover transition-all">
+          <Image className="cursor-pointer min-h-[20px] min-w-[20px]" src="/assets/github-icon.svg" alt="github" width={30} height={30} />
         </Link>
 
       </div>
